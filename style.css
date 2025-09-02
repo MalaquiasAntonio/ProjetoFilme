@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+}
+
+.menuhome{
+    display: flex;
+    background-color: #0D036B;
+    align-items: center;
+    justify-content: space-between;
+}
