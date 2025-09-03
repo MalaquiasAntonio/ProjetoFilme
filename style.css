@@ -5,6 +5,39 @@
 .menuhome{
     display: flex;
     background-color: #0D036B;
+   align-items: center;
+   justify-content: space-around;
+}
+
+#pesquisa{
+    width: 23.5vw;
+    height: 3.5vh;
+    border-radius: 4.5px;
+    border: none;
+    padding: 6px;
+}
+
+#pesquisa::placeholder{
+    text-align: left;
+}
+
+#place{
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+#lupa{
+    position: absolute;
+    border: none;
+    width: 3vw;
+    height: 5.2vh;
+    background-color: #F50077;
+    border-radius: 0px 4.5px 4.5px 0px;
+    right: 45.45vw;
+    transition: 0.4s;
+}
+#lupa:hover{
+    transition: 0.4s;
+    background-color: #F83A96;
 }
