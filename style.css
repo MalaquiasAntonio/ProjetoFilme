@@ -1,20 +1,21 @@
 *{
     margin: 0px;
+    font-family: Josefin Sans;
 }
 
 .menuhome{
     display: flex;
     background-color: #0D036B;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-evenly;
 }
 
 #pesquisa{
     width: 23.5vw;
-    height: 3.5vh;
-    border-radius: 4.5px;
+    height: 2.3vh;
     border: none;
-    padding: 6px;
+    padding: 10px;
+     border-radius: 4.5px;
 }
 
 #pesquisa::placeholder{
@@ -29,15 +30,42 @@
 
 #lupa{
     position: absolute;
-    border: none;
+    left: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3vw;
-    height: 5.2vh;
+    height: 5.12vh;
     background-color: #F50077;
     border-radius: 0px 4.5px 4.5px 0px;
-    right: 45.45vw;
     transition: 0.4s;
 }
 #lupa:hover{
     transition: 0.4s;
     background-color: #F83A96;
+}
+.buttonlogin{
+    transition: 0.4s;
+    border: none;
+    border-radius: 2.5px;
+    width: 6vw;
+    height: 3vh;
+    color: #FF006F;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+.buttonlogin:hover{
+    transition: 0.4s;
+    text-decoration: underline #FF006F;
+}
+#login{
+    transition: 0.4s;
+    color: #FF72DC;
+    text-decoration: underline #FF72DC;
+}
+#login:hover{
+    transition: 0.4s;
+    color: #F50077;
+     text-decoration: underline #FF006F;
 }

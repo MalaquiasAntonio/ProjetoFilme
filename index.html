@@ -5,22 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/bdfe8077-27cc-4c8b-a323-85f60bd798e4.png">
-    <title>CineClub - Home</title>  
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>CineClub - Home</title>
+   
 </head>
 <body>
     <main>
         <header class="menuhome">
-            <img src="./assets/bdfe8077-27cc-4c8b-a323-85f60bd798e4.png" alt="" width="80vw" >
-            <form id="place">
-                <input type="text" name="pesquisa" placeholder="Buscar por Filmes" id="pesquisa">
-                <button type="submit" id="lupa">  
-                    <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icone-de-lupa.png" alt="" width="25vw" style="align-self: center;">
-                </button>
-            </form>
-            <button>login</button>
-            <img src="./assets/1f6d2.png" alt="" width="25vw" >
+            <img src="./assets/bdfe8077-27cc-4c8b-a323-85f60bd798e4.png" alt="" width="80vw">
+            <div style="display: flex; justify-content:center; align-items: center;">
+                <input type="text" name="pesquisa" placeholder="Buscar" id="pesquisa">
+                <div id="lupa">
+                    <img src="./assets/search_26dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" width="25px">
+                </div>
+            </div>
+            <div>
+                <button class="buttonlogin">login</button>
+                <div style="display: flex;flex-direction: row;">
+                    <p style="color: white; font-size: 13px;">Sem conta?</p>
+                    <a href="" style="font-size: 13px;"><p id="login">Cadastrar</p></a>
+                </div>
+            </div>
+            <img src="./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png" alt="" width="30px" style="margin-right: 30px;" id="car">
         </header>
     </main>
+    <script>
+        let car = document.getElementById("car");
+        car.addEventListener("mouseenter",()  =>{
+            car.setAttribute("src","./assets/car.png");
+        });
+        car.addEventListener("mouseleave",() =>{
+            car.setAttribute("src","./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png")
+        });
+    </script>
 </body>
 </html>
+
