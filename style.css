@@ -4,22 +4,24 @@
 }
 
 .menuhome{
+    width: 98.938vw;
     display: flex;
     background-color: #0D036B;
-   align-items: center;
-   justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #pesquisa{
-    width: 23.5vw;
+    width: 27vw;
     height: 2.3vh;
     border: none;
     padding: 10px;
-     border-radius: 4.5px;
+    border-radius: 4.5px;
 }
 
 #pesquisa::placeholder{
     text-align: left;
+    font-size: 17px;
 }
 
 #place{
@@ -30,12 +32,12 @@
 
 #lupa{
     position: absolute;
-    left: 50vw;
+    left: 51.7vw;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 3vw;
-    height: 5.12vh;
+    height: 5.25vh;
     background-color: #F50077;
     border-radius: 0px 4.5px 4.5px 0px;
     transition: 0.4s;
@@ -52,14 +54,16 @@
     height: 3vh;
     color: #FF006F;
     font-size: 15px;
-    margin-bottom: 5px;
-    margin-left: 25px;
+    margin-bottom: 0.7898894154818326vh;
+    margin-left: 1.8301610541727673vw;
+    margin-top: 2.843601895734597vh;
 }
 .buttonlogin:hover{
     transition: 0.4s;
     text-decoration: underline #FF006F;
 }
 #login{
+    height: 4vh;
     transition: 0.4s;
     color: #FF72DC;
     text-decoration: underline #FF72DC;
@@ -67,5 +71,42 @@
 #login:hover{
     transition: 0.4s;
     color: #F50077;
-     text-decoration: underline #FF006F;
+    text-decoration: underline #FF006F;
+}
+#barra{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 98.938vw;
+    height: 6vh;
+    background-color: rgb(219, 219, 219);
+}
+.namesnavs{
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.namesnavs:hover{
+    transition: 0.4s;
+    color: #F50077;
+    border-bottom: 2px solid;
+    border-color: #F50077;
+}
+.img_promoction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98.938vw;
+    height: 73vh;
+    background-repeat: no-repeat;
+    background-size: 98.938vw 75vh;
+}
+
+.sele{
+    display: flex;
+    align-self: flex-end;
+    width: 2vw;
+    flex-direction: row;
+    
 }

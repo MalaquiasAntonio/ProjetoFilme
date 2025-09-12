@@ -30,15 +30,53 @@
             </div>
             <img src="./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png" alt="" width="30px" style="margin-right: 30px;" id="car">
         </header>
+        <nav id="barra">
+            <h3 class="namesnavs">filmes populares</h3>
+            <h3 class="namesnavs">Clássicos</h3>
+            <h3 class="namesnavs">Adicionados recentemente</h3>
+        </nav>
+        <div style="background-image: url(./assets/promoções.png);" class="img_promoction" id="fundo">
+            <img src="./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowLeft" class="img">
+            <div class="sele">
+                <img src="./assets/selecionado.png" alt="" class="sele">
+                <img src="./assets/sele.png" alt="" class="sele">
+            </div>
+            <img src="./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowRight" class="img" onclick="mudar()">
+        </div>
     </main>
     <script>
+        let images = ['url("./assets/promoções.png")','url("./assets/medo.png")']
+        let fundo = document.getElementById("fundo");
         let car = document.getElementById("car");
+        let arrowLeft = document.getElementById("ArrowLeft");
+        let arrowRight = document.getElementById("ArrowRight");
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
         });
         car.addEventListener("mouseleave",() =>{
-            car.setAttribute("src","./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png")
+            car.setAttribute("src","./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png");
         });
+        arrowLeft.addEventListener("mouseover",()=>{
+            arrowLeft.setAttribute("src","./assets/pinta_left.png");
+        });
+        arrowLeft.addEventListener("mouseout",()=>{
+            arrowLeft.setAttribute("src","./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
+        });
+        arrowRight.addEventListener("mouseout",()=>{
+            arrowRight.setAttribute("src","./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
+        });
+        arrowRight.addEventListener("mouseover",()=>{
+            arrowRight.setAttribute("src","./assets/pinta_right.png");
+        });
+        function mudar(){
+            for(let x = 0;x < images.length;x++){
+                if (fundo.style.backgroundImage == images[x]){
+                    fundo.style.backgroundImage = images[x];
+                    // console.log(images[x]);
+                    console.log(fundo.style.backgroundImage);
+                }
+            }
+        }
     </script>
 </body>
 </html>
