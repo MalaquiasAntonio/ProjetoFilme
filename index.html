@@ -36,16 +36,24 @@
             <h3 class="namesnavs">Adicionados recentemente</h3>
         </nav>
         <div style="background-image: url(./assets/promoções.png);" class="img_promoction" id="fundo">
-            <img src="./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowLeft" class="img">
+            <img src="./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowLeft" class="img" onclick="mudar()">
             <div class="sele">
-                <img src="./assets/selecionado.png" alt="" class="sele">
-                <img src="./assets/sele.png" alt="" class="sele">
+                <img src="./assets/selecionado.png" alt="" class="sele" id="ball1">
+                <img src="./assets/sele.png" alt="" class="sele"  id="ball2">
             </div>
             <img src="./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowRight" class="img" onclick="mudar()">
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center; width: 99vw;">
+            <h2>Destaques</h2>
         </div>
     </main>
     <script>
         let images = ['url("./assets/promoções.png")','url("./assets/medo.png")']
+        let balls = ["./assets/selecionado.png","./assets/sele.png"]
+        let ball1 = document.getElementById("ball1");
+        let ball2 = document.getElementById("ball2");
         let fundo = document.getElementById("fundo");
         let car = document.getElementById("car");
         let arrowLeft = document.getElementById("ArrowLeft");
@@ -70,10 +78,15 @@
         });
         function mudar(){
             for(let x = 0;x < images.length;x++){
-                if (fundo.style.backgroundImage == images[x]){
+                if (fundo.style.backgroundImage != images[x]){
                     fundo.style.backgroundImage = images[x];
-                    // console.log(images[x]);
-                    console.log(fundo.style.backgroundImage);
+                    if(ball1.src != balls[x]){
+                        ball2.setAttribute("src",ball1.src);
+                        ball1.setAttribute("src",balls[x]);
+                    }
+                    console.log(x);
+                    break;
+                    // console.log(fundo.style.backgroundImage);
                 }
             }
         }
