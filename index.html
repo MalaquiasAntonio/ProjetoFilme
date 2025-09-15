@@ -52,17 +52,17 @@
                 <img src="./assets/Arrow_black_left_gray.png" alt="" id="Arrow_left">
                 <div class="descri_destaque">
                     <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img1">
-                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-weight: bold;" id="titulo">Nome do Filme</p>
                     <p style="font-size: small;">R$ 00,00</p>
                 </div>
                 <div class="descri_destaque">
                     <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img2">
-                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-weight: bold;" id="titulo">Nome do Filme</p>
                     <p style="font-size: small;">R$ 00,00</p>
                 </div>
                 <div class="descri_destaque">
                     <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img3">
-                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-weight: bold;" id="titulo">Nome do Filme</p>
                     <p style="font-size: small;">R$ 00,00</p>
                 </div>
                 <img src="./assets/Arrow_black_right.png" alt="" id="Arrow_right">
@@ -80,6 +80,7 @@
         let arrowRight = document.getElementById("ArrowRight");
         let ArrowDestaque_right = document.getElementById("Arrow_right");
         let ArrowDestaque_left = document.getElementById("Arrow_left");
+        let titulo = document.getElementById("titulo");
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
         });
@@ -98,20 +99,26 @@
         arrowRight.addEventListener("mouseover",()=>{
             arrowRight.setAttribute("src","./assets/pinta_right.png");
         });
-        if(ArrowDestaque_right.src != "/assets/Arrow_black_right_gray.png"){
+        if(ArrowDestaque_right.src != "http://127.0.0.1:5500/assets/Arrow_black_right_gray.png"){
             ArrowDestaque_right.addEventListener("mouseover",()=>{
                 ArrowDestaque_right.setAttribute("src","./assets/pinta_right.png")
             });
             ArrowDestaque_right.addEventListener("mouseout",()=>{
                 ArrowDestaque_right.setAttribute("src","./assets/Arrow_black_right.png")
             });
+            ArrowDestaque_right.addEventListener("click",()=>{
+                ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png");
+                ArrowDestaque_right.setAttribute("src","/assets/Arrow_black_right_gray.png")
+                titulo.innerText = "Outro filme"
+                console.log(ArrowDestaque_left.src);
+            });
         }
-        if(ArrowDestaque_left.src != "/assets/Arrow_black_left_gray.png"){
+        if(ArrowDestaque_left.src == "http://127.0.0.1:5500/assets/Arrow_black_left.png"){
              ArrowDestaque_left.addEventListener("mouseover",()=>{
                 ArrowDestaque_left.setAttribute("src","./assets/pinta_left.png")
             });
             ArrowDestaque_left.addEventListener("mouseout",()=>{
-                ArrowDestaque_left.setAttribute("src","./assets/Arrow_black_left.png")
+                ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png")
             });
         }
         console.log(ArrowDestaque_left.src);
