@@ -45,8 +45,28 @@
         </div>
         <br>
         <br>
-        <div style="display: flex; justify-content: center; width: 99vw;">
+        <div style="display: flex; justify-content: center; width: 98.8vw; flex-direction: column; align-items: center;">
             <h2>Destaques</h2>
+            <br>
+            <div style="display: flex; justify-content: space-around; width: 94vw; align-items: center;">
+                <img src="./assets/Arrow_black_left_gray.png" alt="" id="Arrow_left">
+                <div class="descri_destaque">
+                    <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img1">
+                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-size: small;">R$ 00,00</p>
+                </div>
+                <div class="descri_destaque">
+                    <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img2">
+                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-size: small;">R$ 00,00</p>
+                </div>
+                <div class="descri_destaque">
+                    <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img3">
+                    <p style="font-weight: bold;">Nome do Filme</p>
+                    <p style="font-size: small;">R$ 00,00</p>
+                </div>
+                <img src="./assets/Arrow_black_right.png" alt="" id="Arrow_right">
+            </div>
         </div>
     </main>
     <script>
@@ -58,6 +78,8 @@
         let car = document.getElementById("car");
         let arrowLeft = document.getElementById("ArrowLeft");
         let arrowRight = document.getElementById("ArrowRight");
+        let ArrowDestaque_right = document.getElementById("Arrow_right");
+        let ArrowDestaque_left = document.getElementById("Arrow_left");
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
         });
@@ -76,6 +98,23 @@
         arrowRight.addEventListener("mouseover",()=>{
             arrowRight.setAttribute("src","./assets/pinta_right.png");
         });
+        if(ArrowDestaque_right.src != "/assets/Arrow_black_right_gray.png"){
+            ArrowDestaque_right.addEventListener("mouseover",()=>{
+                ArrowDestaque_right.setAttribute("src","./assets/pinta_right.png")
+            });
+            ArrowDestaque_right.addEventListener("mouseout",()=>{
+                ArrowDestaque_right.setAttribute("src","./assets/Arrow_black_right.png")
+            });
+        }
+        if(ArrowDestaque_left.src != "/assets/Arrow_black_left_gray.png"){
+             ArrowDestaque_left.addEventListener("mouseover",()=>{
+                ArrowDestaque_left.setAttribute("src","./assets/pinta_left.png")
+            });
+            ArrowDestaque_left.addEventListener("mouseout",()=>{
+                ArrowDestaque_left.setAttribute("src","./assets/Arrow_black_left.png")
+            });
+        }
+        console.log(ArrowDestaque_left.src);
         function mudar(){
             for(let x = 0;x < images.length;x++){
                 if (fundo.style.backgroundImage != images[x]){
