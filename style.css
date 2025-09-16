@@ -125,3 +125,19 @@
 #Arrow_right{
     width: 2.5vw;
 }
+.block_genero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32vw;
+    height: 45vh;
+    background-color: #F50077;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blocks_genero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
