@@ -35,65 +35,150 @@
             <h3 class="namesnavs">Clássicos</h3>
             <h3 class="namesnavs">Adicionados recentemente</h3>
         </nav>
-        <div style="background-image: url(./assets/promoções.png);" class="img_promoction" id="fundo">
-            <img src="./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowLeft" class="img" onclick="mudar()">
-            <div class="sele">
-                <img src="./assets/selecionado.png" alt="" class="sele" id="ball1">
-                <img src="./assets/sele.png" alt="" class="sele"  id="ball2">
-            </div>
-            <img src="./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowRight" class="img" onclick="mudar()">
-        </div>
-        <br>
-        <br>
-        <div style="display: flex; justify-content: center; width: 98.8vw; flex-direction: column; align-items: center;">
-            <h2>Destaques</h2>
-            <br>
-            <div style="display: flex; justify-content: space-around; width: 94vw; align-items: center;">
-                <img src="./assets/Arrow_black_left_gray.png" alt="" id="Arrow_left">
-                <div class="descri_destaque">
-                    <a href="dados.html"><img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img1"></a>
-                    <p style="font-weight: bold;" id="titulo1">Nome do Filme</p>
-                    <p style="font-size: small;">R$ 00,00</p>
+        <section style="padding: 50px;">
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <img src="./assets/Cd_fechado.png" alt="" width="80vw" style="margin-left: 20px;">
+                    <img src="./assets/Cd-aberto.jpg" alt="" width="110vw">
                 </div>
-                <div class="descri_destaque">
-                    <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img2">
-                    <p style="font-weight: bold;" id="titulo2">Nome do Filme</p>
-                    <p style="font-size: small;">R$ 00,00</p>
-                </div>
-                <div class="descri_destaque">
-                    <img src="./assets/Cd_fechado.png" alt="" class="img_destaque" id="img3">
-                    <p style="font-weight: bold;" id="titulo3">Nome do Filme</p>
-                    <p style="font-size: small;">R$ 00,00</p>
-                </div>
-                <img src="./assets/Arrow_black_right.png" alt="" id="Arrow_right">
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div style="display: flex; justify-content: space-around; flex-direction: column; align-self: center;">
-            <div class="blocks_genero">
-                <div class="block_genero" style="background-image: url(./assets/Cinema-de-Terror-subgeneros-e-filmes.jpg);" id="terror">
-                    <h1 style="color: white;" id="genero1">Terror</h1>
-                </div>
-                <div class="block_genero" style="background-image: url(./assets/click.webp);" id="comedia">
-                    <h1 style="color: white;" id="genero2">Comédia</h1>
+                <img src="./assets/Cd_fechado.png" alt="" width="270vw">
+                <div style="padding: 10px; display: flex; flex-direction: column;">
+                    <h2>Nome do Filme</h2>
+                    <br>
+                    <p style="font-size: 13px;">Quantidade disponivel: ?</p>
+                    <br>
+                    <p><strong>Sinopse</strong></p>
+                    <br>
+                    <p style="font-size: 13px; width: 28vw;">Michael Newman, um arquiteto ocupado, encontra um controle remoto mágico que pode controlar o tempo. Inicialmente divertido, o poder logo foge do controle, fazendo-o perder momentos importantes da vida. A experiência o faz refletir sobre a importância da família e de aproveitar cada instante.
+                    </p>
+                    <br>
+                    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                        <a href="carrinho.html"><button id="buttonAlugar">Alugar Agora</button>
+                        </a>
+                        <a href="carrinho.html">
+                            <button id="buttonAlugar" style="width: 5vw;">
+                                <img src="./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
             <br>
             <br>
+            <h2>Trailer</h2>
             <br>
-            <div class="blocks_genero">
-                <div class="block_genero" style="background-image: url(./assets/02070127889006.webp);" id="acao">
-                    <h1 style="color: white;" id="genero3">Ação</h1>
+            <div id="trailer">
+                <img src="./assets/play_circle_90dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt="">
+            </div>
+            <br>
+            <br>
+            <h2>Elenco Principal</h2>
+            <br>
+            <div style="display: flex; justify-content: space-between; width: 85vw;">
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./assets/Adam_Sandler_at_Berlinale_2024.jpg" alt="" class="elenco">
+                    <br>
+                    <strong>Adam Sandler</strong>
+                    <p style="font-size: 12px;">Michael Newman</p>
                 </div>
-                <div class="block_genero" style="background-image: url(./assets/romance.jpg);" id="romance">
-                    <h1 style="color: white;" id="genero4">Romance</h1>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./assets/Kate_Beckinsale_TIFF,_2008.jpg" alt="" class="elenco">
+                    <br>
+                    <strong>Kate Beckinsale</strong>
+                    <p style="font-size: 12px;">Donna Newman</p>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./assets/christopher.webp" alt="" class="elenco">
+                    <br>
+                    <strong>Christopher Walken</strong>
+                    <p style="font-size: 12px;">Morty</p>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./assets/Jonahriu.jpg" alt="" class="elenco">
+                    <br>
+                    <strong>Jonah Hill</strong>
+                    <p style="font-size: 12px;">Ben Newman</p>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./assets/katie.jpg" alt="" class="elenco">
+                    <br>
+                    <strong>Katie Cassidy</strong>
+                    <p style="font-size: 12px;">Samantha Newman</p>
                 </div>
             </div>
-             
-        </div>
+            <br>
+            <br>
+            <h3>Sobre</h3>
+            <br>
+            <br>
+            <div >
+                <p style="font-size: 14px;"><strong>Direção</strong>   Frank Coraci</p>
+                <br>
+                <div class="quadrado" style="width: 85vw;"></div>
+                <br>
+                <p style="font-size: 14px;"><strong>Roteirista</strong>   Steve Koren</p>
+                <br>
+                <div class="quadrado" style="width: 85vw;"></div>
+                <br>
+                <p style="font-size: 14px;"><strong>Duração</strong>   1h 48m</p>
+                <br>
+                <div class="quadrado" style="width: 85vw;"></div>
+                <br>
+                <p style="font-size: 14px;"><strong>Ano</strong>   2006</p>
+                <br>
+                <div class="quadrado" style="width: 85vw;"></div>
+                <br>
+                <p style="font-size: 14px;"><strong>Gênero</strong>   Comédia</p>
+                <br>
+                <div class="quadrado" style="width: 85vw;"></div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Avaliações de usuários</h2>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <img src="./assets/star.png" alt="" width="150vw">
+                <div style="display: flex; flex-direction: column;">
+                    <h1 style="font-size: 50px;">5,00</h1>
+                    <p>2 Avaliações</p>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                <div class="avaliacao">
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <p>Ronaldo Cabral</p>
+                        <img src="./assets/starBlack.png" alt="" width="26vw" style="margin-left: 190px;">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                    </div>
+                    <br>
+                    <br>
+                    <h4 style="font-size: 18px;">Filme Muito interessante</h4>
+                    <br>
+                    <p>Ao assistir a este filme, eu esperava ter a típica fuga de duas horas da vida cotidiana, sem pensar muito, que esse tipo de filme costuma proporcionar. Em vez disso, eu ri. Até chorei. Saí agradavelmente surpreso.
+                    </p>
+                </div>
+                <div class="avaliacao">
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <p>Ronaldo Cabral</p>
+                        <img src="./assets/starBlack.png" alt="" width="26vw" style="margin-left: 190px;">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                        <img src="./assets/starBlack.png" alt="" width="26vw">
+                    </div>
+                    <br>
+                    <br>
+                    <h4 style="font-size: 18px;">Filme Muito interessante</h4>
+                    <br>
+                    <p>Ao assistir a este filme, eu esperava ter a típica fuga de duas horas da vida cotidiana, sem pensar muito, que esse tipo de filme costuma proporcionar. Em vez disso, eu ri. Até chorei. Saí agradavelmente surpreso.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
     <br>
     <br>

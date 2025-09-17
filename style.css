@@ -288,3 +288,27 @@
     transition: 0.4s;
     background-color: #EF64A7;
 }
+#trailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 75vh;
+    background-image: url(./assets/adam-sandler-click-filmes-assistir-tv-warner-sony-pictures-min.webp);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.elenco{
+    width: 8vw;
+    height: 18vh;
+    border-radius: 5px;
+}
+.avaliacao{
+    padding: 20px;
+    background-color: #f3f3f3;
+    width: 35vw;
+    height: 28vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.212);
+}
