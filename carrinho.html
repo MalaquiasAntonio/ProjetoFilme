@@ -8,52 +8,90 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <title>CineClub - Cadastro</title>
+    <title>CineClub - Home</title>
    
 </head>
 <body>
     <main>
-        <header class="menuhome" style="justify-content: flex-start;">
+        <header class="menuhome">
             <a href="/index.html"><img src="./assets/logo.png" alt="" width="80vw"></a>
-        </header>
-        <div style="background-size: cover;background-image: url(./assets/retrowave-background-czszbznzwegpve6d.jpg); height: 100vh;" id="blockLogin">
-           <img src="./assets/logo.png" alt="" width="470vw">
-           <div id="areaLogin">
-            <h1>Cadastre</h1>
-            <br>
-            <form>
-                
-                <input type="text" placeholder="Email" class="campos_login" required>
-                <br>
-                <br>
-            </form>
-            <a href="cadastroNext.html"><button id="button_entre">PRÓXIMO</button></a>
-            <br>
-            <br>
-            <br>
-            <div style="display: flex; flex-direction: row;align-items: center; justify-content: space-between;">
-                <div class="quadrado"></div>
-                <div>
-                    <p style="color: #D9D9D9;">OU</p>
+            <div style="display: flex; justify-content:center; align-items: center;">
+                <input type="text" name="pesquisa" placeholder="Buscar" id="pesquisa">
+                <div id="lupa">
+                    <img src="./assets/search_26dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" width="25px">
                 </div>
-                <div class="quadrado"></div>
             </div>
-            <br>
-            <br>
-            <br>
-            <nav style="display: flex; flex-direction: row; justify-content: space-around;">
-                <button class="button_redes"><img src="./assets/face.png" alt="" width="20vw">
-                    Facebook
-                </button>
-                <button class="button_redes"><img src="./assets/Google__G__logo.svg.png" alt="" width="20vw">
-                    Google
-                </button>
-            </nav>
-           </div>
-
+            <div>
+                <a href="/login.html"><button class="buttonlogin">login</button></a>
+                <div style="display: flex;flex-direction: row;">
+                    <p style="color: white; font-size: 13px;">Sem conta?</p>
+                    <a href="cadastro.html" style="font-size: 13px;"><p id="login">Cadastrar</p></a>
+                </div>
+            </div>
+            <img src="./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png" alt="" width="30px" style="margin-right: 30px;" id="car">
+        </header>
+        <nav id="barra">
+            <h3 class="namesnavs">filmes populares</h3>
+            <h3 class="namesnavs">Clássicos</h3>
+            <h3 class="namesnavs">Adicionados recentemente</h3>
+        </nav>
+        <div style="padding-left: 50px; padding-top: 50px;">
+            <h1>Meu Carrinho</h1>
         </div>
-       
+        <section style="padding: 50px; display: flex; flex-direction: row;">
+            <br>
+            <br>
+            <br>
+            <div class="carrinho">
+                <img src="./assets/Cd_fechado.png" alt="" width="190vw" height="180vh">
+                <div style="height: 28vh; padding: 15px;">
+                    <h3 style="font-size: 23px;">Nome Filme</h3>
+                    <p style="font-size: large;"><strong>R$</strong> 00,00</p>
+                    <br>
+                    <p style="color: rgb(2, 151, 2); font-size: large;">
+                        Em estoque
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="background-color: #D9D9D9;" id="trash">
+                            <img src="./assets/trash.png" alt="" width="30vw">
+                        </div>
+                        <div id="number">
+                            <p style="font-size: 20px;">1</p>
+                        </div>
+                        <div style="background-color: #D9D9D9;" id="add">
+                            <img src="./assets/add.png" alt="" width="20vw">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carrinho" style="margin-left: 180px; align-items: flex-start; flex-direction: column;">
+                <div id="dadosCompras">
+                    <p style="font-size: 22px;">Nome Filme 1x</p>
+                    <p><strong>R$</strong>  00,00</p>
+                </div>
+                <br>
+                <div style="background-color: #CCCCCC; width: 31vw; height: 1vh; border-radius: 2px;">
+                </div>
+                <div id="dadosCompras">
+                    <p style="font-size: 22px;">Total Estimado</p>
+                    <p><strong>R$</strong>  00,00</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="buttonAlugar">Alugar Agora</button>
+            </div>
+        </section>
+
+
     </main>
+    <br>
+    <br>
     <footer style="background-color: #CCCCCC;">
         <div style="width: vw; height: 7vh;background-color: #0D036B;">
         </div>

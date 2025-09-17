@@ -17,40 +17,52 @@
             <a href="/index.html"><img src="./assets/logo.png" alt="" width="80vw"></a>
         </header>
         <div style="background-size: cover;background-image: url(./assets/retrowave-background-czszbznzwegpve6d.jpg); height: 100vh;" id="blockLogin">
-           <img src="./assets/logo.png" alt="" width="470vw">
-           <div id="areaLogin">
-            <h1>Cadastre</h1>
-            <br>
-            <form>
-                
-                <input type="text" placeholder="Email" class="campos_login" required>
+            <div class="block_cadastro">
+                <h1>Cadastrar Dados</h1>
                 <br>
-                <br>
-            </form>
-            <a href="cadastroNext.html"><button id="button_entre">PRÓXIMO</button></a>
-            <br>
-            <br>
-            <br>
-            <div style="display: flex; flex-direction: row;align-items: center; justify-content: space-between;">
-                <div class="quadrado"></div>
-                <div>
-                    <p style="color: #D9D9D9;">OU</p>
-                </div>
-                <div class="quadrado"></div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <nav style="display: flex; flex-direction: row; justify-content: space-around;">
-                <button class="button_redes"><img src="./assets/face.png" alt="" width="20vw">
-                    Facebook
-                </button>
-                <button class="button_redes"><img src="./assets/Google__G__logo.svg.png" alt="" width="20vw">
-                    Google
-                </button>
-            </nav>
-           </div>
+                <form action="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="block_informacoes_cadastro">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome" class="blockCadastro" required>
+                        </div>
+                        <div class="block_informacoes_cadastro">
+                            <label>Sobrenome</label>
+                            <input type="text" placeholder="Sobrenome" class="blockCadastro" required>
+                        </div>
+                        <div class="block_informacoes_cadastro">
+                            <label>CEP</label>
+                            <input type="text" placeholder="CEP" class="blockCadastro" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="display: flex; justify-content: space-between;">
+                       <div class="block_informacoes_cadastro">
+                            <label>Rua</label>
+                            <input type="text" placeholder="Rua" class="blockCadastro" required>
+                       </div>
+                       <div class="block_informacoes_cadastro">
+                            <label>Bairro</label>
+                            <input type="text" placeholder="Bairro" class="blockCadastro" required>
+                       </div>
+                       <div class="block_informacoes_cadastro">
+                            <label>Cidade</label>
+                            <input type="text" placeholder="Cidade" class="blockCadastro" required>
+                       </div>
+                    </div>
+                    <br>
+                    <div class="block_informacoes_cadastro">
 
+                        <label>Celular</label>
+                        <input type="text" placeholder="(47) 99999-999" class="blockCadastro" required>
+                    </div>
+                    <br>
+                    <br>
+                </form>
+                <a href="definirSenha.html"><button id="button_entre" type="submit">PRÓXIMO</button></a>
+            </div>
+            
+            <img src="./assets/logo.png" alt="" width="400vw">
         </div>
        
     </main>

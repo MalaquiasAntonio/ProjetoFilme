@@ -208,3 +208,83 @@
 #car{
     cursor: pointer;
 }
+.block_cadastro{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    width: 60vw;
+    height: 65vh;
+    padding: 20px;
+}
+.blockCadastro{
+    height: 6vh;
+    width: 17vw;
+    font-size: 16px;
+    border-radius: 6px;
+    padding-left: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.253);
+
+}
+.blockCadastro::placeholder{
+    color: rgba(148, 147, 147, 0.459);
+}
+.block_informacoes_cadastro{
+    display: flex;
+    flex-direction: column;
+}
+
+.carrinho{
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    flex-direction: row;
+    background-color: #E8E8E8;
+    width: 34vw;
+    height: 45vh;
+}
+#trash{
+    border-radius: 5px 0px 0px 5px;
+    width: 3vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    width: 5vw;
+}
+#add{
+    border-radius: 0px 5px 5px 0px;
+    width: 3vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dadosCompras{
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+#buttonAlugar{
+    background-color: #FF006F;
+    border: none;
+    color: #E8E8E8;
+    height: 6vh;
+    width: 12vw;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+#buttonAlugar:hover{
+    transition: 0.4s;
+    background-color: #EF64A7;
+}
