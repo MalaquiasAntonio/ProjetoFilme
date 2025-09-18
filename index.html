@@ -31,9 +31,9 @@
             <a href="carrinho.html"><img src="./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png" alt="" width="30px" style="margin-right: 30px;" id="car"></a>
         </header>
         <nav id="barra">
-            <h3 class="namesnavs">filmes populares</h3>
-            <h3 class="namesnavs">Clássicos</h3>
-            <h3 class="namesnavs">Adicionados recentemente</h3>
+            <a href="pesquisa.html" class="tirar"><h3 class="namesnavs">filmes populares</h3></a>
+            <a href="pesquisa.html" class="tirar"><h3 class="namesnavs">Clássicos</h3></a>
+            <a href="pesquisa.html" class="tirar"><h3 class="namesnavs">Adicionados recentemente</h3></a>
         </nav>
         <div style="background-image: url(./assets/promoções.png);" class="img_promoction" id="fundo">
             <img src="./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png" alt="" id="ArrowLeft" class="img" onclick="mudar()">
@@ -75,10 +75,10 @@
         <div style="display: flex; justify-content: space-around; flex-direction: column; align-self: center;">
             <div class="blocks_genero">
                 <div class="block_genero" style="background-image: url(./assets/Cinema-de-Terror-subgeneros-e-filmes.jpg);" id="terror">
-                    <a href="pesquisa.html"><h1 style="color: white;" id="genero1">Terror</h1></a>
+                    <a href="pesquisa.html" style="text-decoration: none;"><h1 style="color: white;" id="genero1">Terror</h1></a>
                 </div>
                 <div class="block_genero" style="background-image: url(./assets/click.webp);" id="comedia">
-                    <h1 style="color: white;" id="genero2">Comédia</h1>
+                    <a href="pesquisa.html" style="text-decoration: none;"><h1 style="color: white;" id="genero2">Comédia</h1></a>
                 </div>
             </div>
             <br>
@@ -86,10 +86,10 @@
             <br>
             <div class="blocks_genero">
                 <div class="block_genero" style="background-image: url(./assets/02070127889006.webp);" id="acao">
-                    <h1 style="color: white;" id="genero3">Ação</h1>
+                    <a href="pesquisa.html" style="text-decoration: none;"><h1 style="color: white;" id="genero3">Ação</h1></a>
                 </div>
                 <div class="block_genero" style="background-image: url(./assets/romance.jpg);" id="romance">
-                    <h1 style="color: white;" id="genero4">Romance</h1>
+                    <a href="pesquisa.html" style="text-decoration: none;"><h1 style="color: white;" id="genero4">Romance</h1></a>
                 </div>
             </div>
              
@@ -129,6 +129,28 @@
         let ArrowDestaque_left = document.getElementById("Arrow_left");
         let titulo = [document.getElementById("titulo1"),document.getElementById("titulo2"),document.getElementById("titulo3")];
         let genero = [document.getElementById("terror"),document.getElementById("comedia"),document.getElementById("acao"),document.getElementById("romance")];
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+
+        img1.addEventListener("mouseover",()=>{
+            img1.setAttribute("src","/assets/Cd-aberto.jpg");
+        });
+        img1.addEventListener("mouseout",()=>{
+            img1.setAttribute("src","/assets/Cd_fechado.png");
+        });
+        img2.addEventListener("mouseover",()=>{
+            img2.setAttribute("src","/assets/Cd-aberto.jpg");
+        });
+        img2.addEventListener("mouseout",()=>{
+            img2.setAttribute("src","/assets/Cd_fechado.png");
+        });
+        img3.addEventListener("mouseover",()=>{
+            img3.setAttribute("src","/assets/Cd-aberto.jpg");
+        });
+        img3.addEventListener("mouseout",()=>{
+            img3.setAttribute("src","/assets/Cd_fechado.png");
+        });
 
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");

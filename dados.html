@@ -38,10 +38,10 @@
         <section style="padding: 50px;">
             <div style="display: flex; flex-direction: row;">
                 <div style="display: flex; flex-direction: column; justify-content: center;">
-                    <img src="./assets/Cd_fechado.png" alt="" width="80vw" style="margin-left: 20px;">
-                    <img src="./assets/Cd-aberto.jpg" alt="" width="110vw">
+                    <img src="./assets/Cd_fechado.png" alt="" width="80vw" style="margin-left: 20px; cursor: pointer;" id="cd1">
+                    <img src="./assets/Cd-aberto.jpg" alt="" width="110vw" id="cd2" style="cursor: pointer;">
                 </div>
-                <img src="./assets/Cd_fechado.png" alt="" width="270vw">
+                <img src="./assets/Cd_fechado.png" alt="" width="270vw" id="cdPrincipal">
                 <div style="padding: 10px; display: flex; flex-direction: column;">
                     <h2>Nome do Filme</h2>
                     <br>
@@ -68,7 +68,7 @@
             <h2>Trailer</h2>
             <br>
             <div id="trailer">
-                <img src="./assets/play_circle_90dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                <img src="./assets/play_circle_90dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" alt="" id="play">
             </div>
             <br>
             <br>
@@ -200,6 +200,7 @@
                 <p>email@contado.com</p>
             </div>
         </div>
+        <img src="./assets/playPinta.png" alt="">
     </footer>
     <script>
         let images = ['url("./assets/promoções.png")','url("./assets/medo.png")']
@@ -214,7 +215,24 @@
         let ArrowDestaque_left = document.getElementById("Arrow_left");
         let titulo = [document.getElementById("titulo1"),document.getElementById("titulo2"),document.getElementById("titulo3")];
         let genero = [document.getElementById("terror"),document.getElementById("comedia"),document.getElementById("acao"),document.getElementById("romance")];
+        let cd1 = document.getElementById("cd1");
+        let cd2 = document.getElementById("cd2");
+        let cd = document.getElementById("cdPrincipal");
+        let play = document.getElementById("play");
 
+
+        play.addEventListener("mouseover",()=>{
+            play.setAttribute("src","./assets/playPinta.png");
+        });
+        play.addEventListener("mouseout",()=>{
+            play.setAttribute("src","./assets/play_circle_90dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png");
+        });
+        cd1.addEventListener("click",()=>{
+            cd.setAttribute("src",cd1.src);
+        });
+        cd2.addEventListener("click",()=>{
+            cd.setAttribute("src",cd2.src);
+        });
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
         });

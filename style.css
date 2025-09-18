@@ -316,8 +316,8 @@
     padding: 30px;
     border-radius: 6px;
     background-color: #dddcdc;
-    width: 24vw;
-    height: 25vh;
+    width: 22vw;
+    height: 45vh;
 }
 .venda_dvd{
     margin-left: 30px;
@@ -336,4 +336,16 @@
 }
 .margem{
     margin-top: 30px;
+}
+#play{
+    cursor: pointer;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.tirar{
+    color: #FF006F;
+    text-decoration: none;
+    color:none;
 }

@@ -41,37 +41,44 @@
                 <div style="padding-top: 10px; display: flex; flex-direction: row;">
                     <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check1" class="cursor">
                             <p>Comédia</p>
                         </div>
                         <br>
                        <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check2" class="cursor">
                             <p>Ação</p>
                         </div>
                         <br>
                         <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check3" class="cursor">
                             <p>Drama</p>
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; margin-left: 60px;">
                         <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check4" class="cursor">
                             <p>Terror</p>
                         </div>
                         <br>
                          <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check5" class="cursor">
                             <p>Romance</p>
                         </div>
                         <br>
                          <div style="display: flex; flex-direction: row; align-content: center;">
-                            <img src="./assets/check_box.png" alt="" width="25vw">
-                            <p>Ficção Científica</p>
+                            <img src="./assets/check_box.png" alt="" width="25vw" id="check6" class="cursor">
+                            <p style="width: 10vw;">Ficção Científica</p>
                         </div>
                     </div>
                 </div>
+                <br>
+                <h2>Preço</h2>
+                <br>
+                <select style="width: 17vw; height: 5vh;">
+                    <option>Preço ↑</option>
+                    <option>Preço ↓</option>
+                </select>
             </div>
 
             <section style="margin-left: 50px;">
@@ -150,6 +157,7 @@
                 <p>email@contado.com</p>
             </div>
         </div>
+        <img src="./assets/check_box_pinta.png" alt="">
     </footer>
     <script>
         let images = ['url("./assets/promoções.png")','url("./assets/medo.png")']
@@ -164,6 +172,81 @@
         let ArrowDestaque_left = document.getElementById("Arrow_left");
         let titulo = [document.getElementById("titulo1"),document.getElementById("titulo2"),document.getElementById("titulo3")];
         let genero = [document.getElementById("terror"),document.getElementById("comedia"),document.getElementById("acao"),document.getElementById("romance")];
+        let check1 = document.getElementById("check1");
+        let check2 = document.getElementById("check2");
+        let check3 = document.getElementById("check3");
+        let check4 = document.getElementById("check4");
+        let check5 = document.getElementById("check5");
+        let check6 = document.getElementById("check6");
+
+        // check1.addEventListener("mouseover",()=>{
+        //     check1.setAttribute("src","./assets/check_box_pinta.png");
+        // });
+        // check1.addEventListener("mouseout",()=>{
+        //     check1.setAttribute("src","./assets/check_box.png");
+        // });
+        check1.addEventListener("click",()=>{
+            if(check1.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check1.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check1.src);
+                return
+            }
+            check1.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        check2.addEventListener("click",()=>{
+            if(check2.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check2.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check2.src);
+                return
+            }
+            check2.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        check3.addEventListener("click",()=>{
+            if(check3.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check3.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check3.src);
+                return
+            }
+            check3.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        check4.addEventListener("click",()=>{
+            if(check4.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check4.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check3.src);
+                return
+            }
+            check4.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        
+        check5.addEventListener("click",()=>{
+            if(check5.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check5.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check5.src);
+                return
+            }
+            check5.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        check6.addEventListener("click",()=>{
+            if(check6.src != "http://127.0.0.1:5500/assets/check_box_pinta.png"){
+                check6.setAttribute("src","./assets/check_box_pinta.png");
+                console.log(check5.src);
+                return
+            }
+            check6.setAttribute("src","./assets/check_box.png");
+            console.log("Aqui");
+            
+        });
+        
 
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
@@ -171,81 +254,7 @@
         car.addEventListener("mouseleave",() =>{
             car.setAttribute("src","./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png");
         });
-        arrowLeft.addEventListener("mouseover",()=>{
-            arrowLeft.setAttribute("src","./assets/pinta_left.png");
-        });
-        arrowLeft.addEventListener("mouseout",()=>{
-            arrowLeft.setAttribute("src","./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
-        });
-        arrowRight.addEventListener("mouseout",()=>{
-            arrowRight.setAttribute("src","./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
-        });
-        arrowRight.addEventListener("mouseover",()=>{
-            arrowRight.setAttribute("src","./assets/pinta_right.png");
-        });
-        ArrowDestaque_right.addEventListener("mouseover",()=>{
-            if(ArrowDestaque_right.src != "http://127.0.0.1:5500/assets/Arrow_black_right_gray.png"){
-                ArrowDestaque_right.setAttribute("src","./assets/pinta_right.png")
-            }
-        });
-        if(ArrowDestaque_right.src != "http://127.0.0.1:5500/assets/Arrow_black_right_gray.png"){
-            ArrowDestaque_right.addEventListener("mouseout",()=>{
-                ArrowDestaque_right.setAttribute("src","./assets/Arrow_black_right_gray.png");
-            });
-        }
-        ArrowDestaque_right.addEventListener("click",()=>{
-            ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png");
-            ArrowDestaque_right.setAttribute("src","/assets/Arrow_black_right_gray.png");
-            for(let i =0;titulo.length >= i;i++){
-                    titulo[i].innerText = "Outro Nome Filme";
-                }
-
-            console.log(ArrowDestaque_left.src);
-        });
-        ArrowDestaque_left.addEventListener("mouseover",()=>{
-            if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                ArrowDestaque_left.setAttribute("src","./assets/pinta_left.png")
-                
-            }
-        });
-            ArrowDestaque_left.addEventListener("mouseout",()=>{
-                if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                    ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png")
-                }
-        });
-        ArrowDestaque_left.addEventListener("click",()=>{
-            if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                ArrowDestaque_right.setAttribute("src","/assets/Arrow_black_right.png");
-                ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left_gray.png");
-                for(let y =0;titulo.length >= y;y++){
-                    titulo[y].innerText = "Nome Filme";
-                }
-            }
-        });
-        genero[0].addEventListener("mouseover",()=>{
-            document.getElementById("genero1").style.color = "#FF006F";
-        });
-        genero[0].addEventListener("mouseout",()=>{
-            document.getElementById("genero1").style.color = "white";
-        });
-        genero[1].addEventListener("mouseover",()=>{
-            document.getElementById("genero2").style.color = "#FF006F";
-        });
-        genero[1].addEventListener("mouseout",()=>{
-            document.getElementById("genero2").style.color = "white";
-        });
-        genero[2].addEventListener("mouseover",()=>{
-            document.getElementById("genero3").style.color = "#FF006F";
-        });
-        genero[2].addEventListener("mouseout",()=>{
-            document.getElementById("genero3").style.color = "white";
-        });
-        genero[3].addEventListener("mouseover",()=>{
-            document.getElementById("genero4").style.color = "#FF006F";
-        });
-        genero[3].addEventListener("mouseout",()=>{
-            document.getElementById("genero4").style.color = "white";
-        });
+        
         function mudar(){
             for(let x = 0;x < images.length;x++){
                 if (fundo.style.backgroundImage != images[x]){

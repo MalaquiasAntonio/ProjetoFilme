@@ -57,13 +57,13 @@
                     <br>
                     <div style="display: flex; flex-direction: row;">
                         <div style="background-color: #D9D9D9;" id="trash">
-                            <img src="./assets/trash.png" alt="" width="30vw">
+                            <img src="./assets/trash.png" alt="" width="30vw" id="trash1" onclick="trashmuda()">
                         </div>
                         <div id="number">
-                            <p style="font-size: 20px;">1</p>
+                            <p style="font-size: 20px;" id="num">1</p>
                         </div>
                         <div style="background-color: #D9D9D9;" id="add">
-                            <img src="./assets/add.png" alt="" width="20vw">
+                            <img src="./assets/add.png" alt="" width="20vw" id="add1" onclick="soma()">
                         </div>
                     </div>
                 </div>
@@ -109,21 +109,36 @@
                 <p>47 99999-999</p>
                 <p>email@contado.com</p>
             </div>
+            <img src="./assets/trashPinta.png" alt="">
         </div>
     </footer>
     <script>
-        let images = ['url("./assets/promoções.png")','url("./assets/medo.png")']
-        let balls = ["./assets/selecionado.png","./assets/sele.png"]
-        let ball1 = document.getElementById("ball1");
-        let ball2 = document.getElementById("ball2");
-        let fundo = document.getElementById("fundo");
+        let conta = 1;
         let car = document.getElementById("car");
-        let arrowLeft = document.getElementById("ArrowLeft");
-        let arrowRight = document.getElementById("ArrowRight");
-        let ArrowDestaque_right = document.getElementById("Arrow_right");
-        let ArrowDestaque_left = document.getElementById("Arrow_left");
-        let titulo = [document.getElementById("titulo1"),document.getElementById("titulo2"),document.getElementById("titulo3")];
-        let genero = [document.getElementById("terror"),document.getElementById("comedia"),document.getElementById("acao"),document.getElementById("romance")];
+        let trash = document.getElementById("trash");
+        let add = document.getElementById("add");
+        let num = document.getElementById("num");
+
+        trash.addEventListener("mouseover",()=>{
+            if(document.getElementById("trash1").getAttribute("src") == "./assets/trash.png"){
+                document.getElementById("trash1").setAttribute("src","./assets/trashPinta.png");
+            }else{
+                document.getElementById("trash1").setAttribute("src","./assets/removePinta.png");
+            }
+        });
+        trash.addEventListener("mouseout",()=>{
+            if(document.getElementById("trash1").getAttribute("src") == "./assets/removePinta.png" || document.getElementById("trash1").getAttribute("src") == "./assets/remove.png"){
+                document.getElementById("trash1").setAttribute("src","./assets/remove.png");
+            }else{
+                document.getElementById("trash1").setAttribute("src","./assets/trash.png");
+            }
+        });
+        add.addEventListener("mouseover",()=>{
+            document.getElementById("add1").setAttribute("src","./assets/somaPinta.png");
+        });
+        add.addEventListener("mouseout",()=>{
+            document.getElementById("add1").setAttribute("src","./assets/add.png");
+        });
 
         car.addEventListener("mouseenter",()  =>{
             car.setAttribute("src","./assets/car.png");
@@ -131,81 +146,7 @@
         car.addEventListener("mouseleave",() =>{
             car.setAttribute("src","./assets/shopping_cart_32dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png");
         });
-        arrowLeft.addEventListener("mouseover",()=>{
-            arrowLeft.setAttribute("src","./assets/pinta_left.png");
-        });
-        arrowLeft.addEventListener("mouseout",()=>{
-            arrowLeft.setAttribute("src","./assets/chevron_left_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
-        });
-        arrowRight.addEventListener("mouseout",()=>{
-            arrowRight.setAttribute("src","./assets/chevron_right_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png");
-        });
-        arrowRight.addEventListener("mouseover",()=>{
-            arrowRight.setAttribute("src","./assets/pinta_right.png");
-        });
-        ArrowDestaque_right.addEventListener("mouseover",()=>{
-            if(ArrowDestaque_right.src != "http://127.0.0.1:5500/assets/Arrow_black_right_gray.png"){
-                ArrowDestaque_right.setAttribute("src","./assets/pinta_right.png")
-            }
-        });
-        if(ArrowDestaque_right.src != "http://127.0.0.1:5500/assets/Arrow_black_right_gray.png"){
-            ArrowDestaque_right.addEventListener("mouseout",()=>{
-                ArrowDestaque_right.setAttribute("src","./assets/Arrow_black_right_gray.png");
-            });
-        }
-        ArrowDestaque_right.addEventListener("click",()=>{
-            ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png");
-            ArrowDestaque_right.setAttribute("src","/assets/Arrow_black_right_gray.png");
-            for(let i =0;titulo.length >= i;i++){
-                    titulo[i].innerText = "Outro Nome Filme";
-                }
-
-            console.log(ArrowDestaque_left.src);
-        });
-        ArrowDestaque_left.addEventListener("mouseover",()=>{
-            if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                ArrowDestaque_left.setAttribute("src","./assets/pinta_left.png")
-                
-            }
-        });
-            ArrowDestaque_left.addEventListener("mouseout",()=>{
-                if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                    ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left.png")
-                }
-        });
-        ArrowDestaque_left.addEventListener("click",()=>{
-            if(ArrowDestaque_left.src != "http://127.0.0.1:5500/assets/Arrow_black_left_gray.png"){
-                ArrowDestaque_right.setAttribute("src","/assets/Arrow_black_right.png");
-                ArrowDestaque_left.setAttribute("src","/assets/Arrow_black_left_gray.png");
-                for(let y =0;titulo.length >= y;y++){
-                    titulo[y].innerText = "Nome Filme";
-                }
-            }
-        });
-        genero[0].addEventListener("mouseover",()=>{
-            document.getElementById("genero1").style.color = "#FF006F";
-        });
-        genero[0].addEventListener("mouseout",()=>{
-            document.getElementById("genero1").style.color = "white";
-        });
-        genero[1].addEventListener("mouseover",()=>{
-            document.getElementById("genero2").style.color = "#FF006F";
-        });
-        genero[1].addEventListener("mouseout",()=>{
-            document.getElementById("genero2").style.color = "white";
-        });
-        genero[2].addEventListener("mouseover",()=>{
-            document.getElementById("genero3").style.color = "#FF006F";
-        });
-        genero[2].addEventListener("mouseout",()=>{
-            document.getElementById("genero3").style.color = "white";
-        });
-        genero[3].addEventListener("mouseover",()=>{
-            document.getElementById("genero4").style.color = "#FF006F";
-        });
-        genero[3].addEventListener("mouseout",()=>{
-            document.getElementById("genero4").style.color = "white";
-        });
+        
         function mudar(){
             for(let x = 0;x < images.length;x++){
                 if (fundo.style.backgroundImage != images[x]){
@@ -220,7 +161,24 @@
                 }
             }
         }
+        function trashmuda(){
+            if(conta > 1){
+                conta--;
+                num.innerText = conta;
+                if(conta == 1){
+                document.getElementById("trash1").setAttribute("src","./assets/trash.png");
+                }
+            }
+        }
+        function soma(){
+            conta++;
+            num.innerText = conta;
+            console.log(document.getElementById("trash1").getAttribute("src"));
+            document.getElementById("trash1").setAttribute("src","./assets/remove.png");
+            
+        }
     </script>
+    <!-- <img src="./assets/remove.png" alt=""> -->
 </body>
 </html>
 
